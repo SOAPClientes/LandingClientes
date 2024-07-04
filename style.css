@@ -25,6 +25,7 @@ body {
   place-items: center;
   height: 100vh;
   font-family: Arial, sans-serif;
+  justify-content: center;
 }
 
 .gallery {

@@ -14,30 +14,38 @@
       </video>
     </div>
     <div class="gallery">
-      <figure class="card">
+      <figure class="card" data-url="http://localhost:4321">
         <img src="images/Astro.jpg" alt="Astro" />
         <figcaption>Astro</figcaption>
       </figure>
-      <figure class="card">
+      <figure class="card" data-url="http://localhost:8000">
         <img src="images/Django.jpg" alt="Django" />
         <figcaption>Django</figcaption>
       </figure>
-      <figure class="card">
-        <img src="images/Rust.png" alt="RocketRust" />
-        <figcaption>Rocket</figcaption>
+
+      <figure class="card" data-url="http://localhost:3000">
+        <img src="images/React.jpg" alt="React" />
+        <figcaption>React</figcaption>
       </figure>
-      <figure class="card">
-        <img src="images/Haskell.png" alt="YesodHaskell" />
-        <figcaption>Yesod</figcaption>
+
+      <figure class="card" data-url="http://localhost:8084">
+        <img src="images/Go.jpg" alt="Go" />
+        <figcaption>Go</figcaption>
       </figure>
-      <figure class="card">
-        <img src="images/Python.jpg" alt="Python" />
-        <figcaption>Python</figcaption>
-      </figure>
-      <figure class="card">
-        <img src="images/Java.jpg" alt="Java" />
-        <figcaption>Java</figcaption>
+
+      <figure class="card" data-url="http://localhost:4567">
+        <img src="images/Ruby.jpg" alt="Ruby" />
+        <figcaption>Ruby</figcaption>
       </figure>
     </div>
+    <script>
+      document.querySelectorAll(".card").forEach((card) => {
+        card.addEventListener("click", () => {
+          const url = card.getAttribute("data-url");
+          const newWindow = window.open(url, "_blank");
+          newWindow.focus();
+        });
+      });
+    </script>
   </body>
 </html>
